@@ -1,0 +1,18 @@
+<% unless job['finding_aid_language'].nil? %>
+  <div class="form-group">
+    <label class="col-sm-3 control-label"><%= I18n.t("lang_script_job.finding_aid_language")  %></label>
+    <div class="col-sm-9 controls label-only"><%= I18n.t("enumerations.language_iso639_2.#{job['finding_aid_language']}", :default => job['finding_aid_language']) %></div>
+  </div>
+<% end %>
+<% unless job['finding_aid_script'].nil? %>
+  <div class="form-group">
+    <label class="col-sm-3 control-label"><%= I18n.t("lang_script_job.finding_aid_script")  %></label>
+    <div class="col-sm-9 controls label-only"><%= I18n.t("enumerations.script_iso15924.#{job['finding_aid_script']}", :default => job['finding_aid_script']) %></div>
+  </div>
+<% end %>
+<% if user_can?('administer_system') %>
+  <div class="form-group">
+    <label class="col-sm-3 control-label"><%= I18n.t("lang_script_job.all_repos")  %></label>
+    <div class="col-sm-9 controls label-only"><%= job['all_repos'] %></div>
+  </div>
+<% end %>
