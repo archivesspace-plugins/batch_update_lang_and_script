@@ -1,0 +1,10 @@
+en:
+  lang_script_job:
+    _singular: Update Default Language and Script Job
+    _plural: Update Default Language and Script Jobs
+    finding_aid_language: New language
+    finding_aid_script: New script
+    all_repos: Globally run update for all repositories?
+  job:
+    types:
+      lang_script_job: Update Default Language and Script Job
