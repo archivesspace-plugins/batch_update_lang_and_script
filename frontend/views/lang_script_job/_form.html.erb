@@ -1,6 +1,3 @@
-<%# This gives an example of how to apply javascript to a custom background job form %>
-<%#= javascript_include_tag "#{AppConfig[:frontend_prefix]}assets/javascripts/slow_nothing.js" %>
-
 <div class="alert alert-danger">
   <p> <%= "Warning: This job will overwrite all existing Language of Description and Script of Description values currently set to the migration defaults." %>
 </div>
@@ -13,10 +10,3 @@
 <% if user_can?('administer_system') %>
   <%= form.label_and_boolean "all_repos" %>
 <% end %>
-
-<%#
-	you could also use something like
-	<input name="job[times]"> or text_field_tag 'job[times]'
-  instead of using the form helper
-	*** previously the name would have been "slow_nothing_job[times]" but this has changed ***
-%>
